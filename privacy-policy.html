@@ -155,14 +155,13 @@
       <li><a href="#data">Information the Service processes</a></li>
       <li><a href="#use">How the Service uses information</a></li>
       <li><a href="#meta">Meta and WhatsApp</a></li>
-      <li><a href="#backend">Backend and cloud providers</a></li>
-      <li><a href="#hosting">Where the Service is hosted</a></li>
+      <li><a href="#backend">Service providers</a></li>
       <li><a href="#sharing">When information is shared</a></li>
       <li><a href="#security">How the Service protects information</a></li>
       <li><a href="#retention">How long information is kept</a></li>
       <li><a href="#deletion">User data deletion instructions</a></li>
       <li><a href="#rights">Your privacy rights</a></li>
-      <li><a href="#transfers">International transfers</a></li>
+      <li><a href="#transfers">Where information is processed</a></li>
       <li><a href="#children">Children's privacy</a></li>
       <li><a href="#changes">Changes to this policy</a></li>
       <li><a href="#contact">Contact us</a></li>
@@ -172,7 +171,7 @@
 
   <section id="overview">
     <h2>1. Who we are</h2>
-    <p><strong>TRUECARE MULTISPECIALITY HOSPITAL</strong> ("the Hospital", also trading as <strong>Truecare Hospitals</strong>, "we", "us", "our") is a multispeciality hospital located in Kolar, Karnataka, India. TRUECARE IM provides the <strong>technical WhatsApp Business integration</strong> (the "Service") for the Hospital, connecting the Hospital's existing WhatsApp Business app number to Meta's WhatsApp Business Platform and to a secure backend built on Supabase.</p>
+    <p><strong>TRUECARE MULTISPECIALITY HOSPITAL</strong> ("the Hospital", also trading as <strong>Truecare Hospitals</strong>, "we", "us", "our") is a multispeciality hospital located in Kolar, Karnataka, India. TRUECARE IM provides the <strong>technical WhatsApp Business integration</strong> (the "Service") for the Hospital, connecting the Hospital's existing WhatsApp Business app number to Meta's WhatsApp Business Platform and to a secure managed backend.</p>
     <p>This Privacy Policy explains what information the Service processes, why, and how it is protected. It applies only to the Service — the technical integration — and not to the Hospital's medical records or clinical systems. Messages that patients and other people exchange with the Hospital over WhatsApp are also governed by Meta's and WhatsApp's own terms and privacy policies.</p>
     <p>You can visit the official hospital website at
       <a href="https://truecarehospitals.com/" target="_blank" rel="noopener">https://truecarehospitals.com/</a>.</p>
@@ -202,7 +201,7 @@
     <p>To link a signup attempt to the correct operator, the Service issues a single-use, random <strong>nonce</strong>. It stores the nonce with the operator user identifier, an expiry time (10 minutes), and the time it was used.</p>
 
     <h3>2.4 Access credentials (tokens)</h3>
-    <p>The Service exchanges Meta's authorization code, on the server, for a WhatsApp Business <strong>access token</strong>. That token is stored <strong>encrypted in Supabase Vault</strong>. Only an opaque Vault reference (a UUID) and non-sensitive lifecycle metadata (status such as <code>none</code>, <code>active</code>, <code>expired</code>, or <code>revoked</code>, plus expiry and last-rotated times) is stored in the Service's ordinary database tables. The raw token is never stored in ordinary tables and never reaches the browser page.</p>
+    <p>The Service exchanges Meta's authorization code, on the server, for a WhatsApp Business <strong>access token</strong>. That token is stored <strong>encrypted in a secure secret store</strong>. Only an opaque secret-store reference (a UUID) and non-sensitive lifecycle metadata (status such as <code>none</code>, <code>active</code>, <code>expired</code>, or <code>revoked</code>, plus expiry and last-rotated times) is stored in the Service's ordinary database tables. The raw token is never stored in ordinary tables and never reaches the browser page.</p>
 
     <h3>2.5 WhatsApp webhook event data</h3>
     <p>Meta sends webhook notifications to the Service for the connected WhatsApp Business Account (for example, an incoming-message notification or a message status change). For each event the Service may store:</p>
@@ -244,23 +243,12 @@
   </section>
 
   <section id="backend">
-    <h2>5. Backend and cloud providers</h2>
-    <p>The Service's backend runs on <strong>Supabase</strong>, which provides the managed PostgreSQL database, authentication, edge functions, and encrypted secret storage (Vault) used by the Service. Supabase processes this data on the Hospital's behalf as a hosting and infrastructure provider.</p>
-  </section>
-
-  <section id="hosting">
-    <h2>6. Where the Service is hosted</h2>
-    <ul>
-      <li>The <strong>onboarding application</strong> (the staff signup page used to connect the WhatsApp number) is a static web application hosted on <strong>Vercel</strong> at
-        <a href="https://truecare-im-whatsapp-coexistence.vercel.app/" target="_blank" rel="noopener">https://truecare-im-whatsapp-coexistence.vercel.app/</a>.</li>
-      <li>This <strong>privacy policy</strong> is a static page hosted on <strong>GitHub Pages</strong> at
-        <a href="https://gpttabrez.github.io/truecare-im-privacy-policy/privacy-policy.html" target="_blank" rel="noopener">https://gpttabrez.github.io/truecare-im-privacy-policy/privacy-policy.html</a>.</li>
-    </ul>
-    <p>These static hosters serve the pages only; they do not process the Service's data (operator accounts, tokens, or webhook records).</p>
+    <h2>5. Service providers</h2>
+    <p>The Service relies on established managed backend and infrastructure providers that supply the managed PostgreSQL database, authentication, server-side application functions, and encrypted secret storage used by the Service. These providers process this data on the Hospital's behalf under their own terms and privacy policies.</p>
   </section>
 
   <section id="sharing">
-    <h2>7. When information is shared</h2>
+    <h2>6. When information is shared</h2>
     <p>We do not sell personal data. The Service shares data only with the providers needed to run it:</p>
     <table>
       <thead>
@@ -268,20 +256,19 @@
       </thead>
       <tbody>
         <tr><td>Meta Platforms, Inc. / WhatsApp</td><td>Embedded Signup, Graph API access, and webhook delivery for the connected WhatsApp Business number.</td></tr>
-        <tr><td>Supabase</td><td>Managed database, authentication, edge functions, and encrypted secret storage.</td></tr>
-        <tr><td>Vercel</td><td>Serves the static onboarding web application.</td></tr>
-        <tr><td>GitHub Pages</td><td>Serves this static privacy policy page.</td></tr>
+        <tr><td>Secure backend service providers</td><td>Managed database, authentication, server-side application functions, and encrypted secret storage.</td></tr>
+        <tr><td>Hosting providers</td><td>Serving the static onboarding and privacy-policy pages.</td></tr>
       </tbody>
     </table>
     <p>We do not share data with any other third parties except where required by law.</p>
   </section>
 
   <section id="security">
-    <h2>8. How the Service protects information</h2>
+    <h2>7. How the Service protects information</h2>
     <p>The Service puts the following technical measures in place. This is a factual description and is not a guarantee of absolute security; no method of electronic storage or transmission is completely secure.</p>
     <ul>
       <li>Webhook authenticity is verified using Meta's HMAC-SHA256 signature header (<code>X-Hub-Signature-256</code>) over the exact raw request body, with a timing-safe comparison.</li>
-      <li>Authorization codes and access tokens are exchanged and stored server-side; the raw token is held only in Supabase Vault (encrypted) and referenced by an opaque UUID.</li>
+      <li>Authorization codes and access tokens are exchanged and stored server-side; the raw token is held only in encrypted secret storage and referenced by an opaque UUID.</li>
       <li>Database tables have row-level security forced on and are reached through server-side functions rather than direct client access.</li>
       <li>Operator actions are authorised by role; only operators with the <code>owner</code> role can perform token operations.</li>
       <li>Application secrets (Meta app credentials, verification token, and service credentials) are held as server-side secrets and are not placed in client pages or the public repository.</li>
@@ -289,7 +276,7 @@
   </section>
 
   <section id="retention">
-    <h2>9. How long information is kept</h2>
+    <h2>8. How long information is kept</h2>
     <p>We keep information only as long as needed to run the Service, meet legal obligations, and resolve disputes:</p>
     <ul>
       <li>Onboarding session records expire after 10 minutes, and expired sessions are removed by the Service.</li>
@@ -303,7 +290,7 @@
   </section>
 
   <section id="deletion">
-    <h2>10. User data deletion instructions</h2>
+    <h2>9. User data deletion instructions</h2>
     <p>You can ask us to delete the information the Service holds about you. This section explains how to request deletion, how we verify a request, and what we can and cannot delete.</p>
 
     <div class="deletion-card">
@@ -330,28 +317,28 @@
   </section>
 
   <section id="rights">
-    <h2>11. Your privacy rights</h2>
+    <h2>10. Your privacy rights</h2>
     <p>Subject to applicable law, individuals may have the right to access, correct, or delete their personal data, to restrict or object to processing, and to data portability. Requests about a WhatsApp conversation should generally be directed to the Hospital; requests about the Service's operator accounts or technical records can be sent to us.</p>
     <p>To make a request, use the details in <a href="#contact">Contact us</a>, or follow the steps in <a href="#deletion">User data deletion instructions</a>. We will verify the request and respond within the time required by applicable law.</p>
   </section>
 
   <section id="transfers">
-    <h2>12. International transfers</h2>
-    <p>The Service uses cloud providers (Meta and Supabase) that may process data in countries other than India, where the Service is operated. Where required, transfers rely on appropriate safeguards provided by those providers.</p>
+    <h2>11. Where information is processed</h2>
+    <p>The Service uses cloud providers (including Meta and our managed backend providers) that may process data in countries other than India, where the Service is operated. Where required, transfers rely on appropriate safeguards provided by those providers.</p>
   </section>
 
   <section id="children">
-    <h2>13. Children's privacy</h2>
+    <h2>12. Children's privacy</h2>
     <p>The Service is a staff-facing business integration and is not directed to children. We do not knowingly collect personal data from children through the Service.</p>
   </section>
 
   <section id="changes">
-    <h2>14. Changes to this policy</h2>
+    <h2>13. Changes to this policy</h2>
     <p>We may update this policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. Material changes will be reflected on this page.</p>
   </section>
 
   <section id="contact">
-    <h2>15. Contact us</h2>
+    <h2>14. Contact us</h2>
     <p>For questions about this policy or the Service's data practices, or to make a privacy or deletion request:</p>
     <p>
       <strong>TRUECARE MULTISPECIALITY HOSPITAL</strong><br />
@@ -363,12 +350,11 @@
   </section>
 
   <section id="unresolved">
-    <h2>16. Details pending confirmation</h2>
+    <h2>15. Details pending confirmation</h2>
     <p>The following items are not defined in the Service's code, configuration, or publicly available information. We list them here rather than stating details we cannot verify:</p>
     <ul>
       <li>Full registered legal entity name and registration number, if these differ from "TRUECARE MULTISPECIALITY HOSPITAL".</li>
-      <li>Specific retention periods for each data category (see section 9).</li>
-      <li>The Supabase project region / data residency, if a specific storage location must be stated.</li>
+      <li>Specific retention periods for each data category (see section 8).</li>
       <li>A governing-law / jurisdiction clause and any required legal-basis statement (for example consent, contract, or legitimate interest).</li>
       <li>A Data Protection Officer or privacy officer contact, if one has been appointed.</li>
     </ul>
@@ -404,7 +390,7 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>© 2026 Truecare Hospitals. This privacy policy is hosted on GitHub Pages; the onboarding application is hosted on Vercel. It describes the integration's technical data handling based on its implemented code and configuration.</p>
+    <p>© 2026 Truecare Hospitals. It describes the integration's technical data handling based on its implemented code and configuration.</p>
   </div>
 </footer>
 
