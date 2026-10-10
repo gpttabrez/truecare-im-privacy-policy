@@ -3,255 +3,410 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Privacy Policy — Truecare Hospitals WhatsApp Business App Coexistence</title>
-<meta name="description" content="Privacy Policy describing how Truecare Hospitals, Kolar, collects and handles data for its WhatsApp Business App Coexistence integration built on Meta and Supabase." />
+<title>Privacy Policy — Truecare Multispeciality Hospital (WhatsApp Integration by TRUECARE IM)</title>
+<meta name="description" content="Privacy Policy for the WhatsApp Business App Coexistence integration provided by TRUECARE IM for Truecare Multispeciality Hospital, Kolar, Karnataka." />
 <style>
   :root {
-    color-scheme: light dark;
-    --fg: #1a1a1a;
-    --muted: #5a5f66;
-    --bg: #ffffff;
-    --line: #e2e5e9;
-    --accent: #1877f2;
-    --note-bg: #fff6d6;
-    --note-line: #e6c34a;
-    --note-fg: #6b4e00;
-    --code-bg: #f4f5f7;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --fg: #e8eaed;
-      --muted: #a2a8b0;
-      --bg: #14161a;
-      --line: #2c3138;
-      --accent: #6aa9ff;
-      --note-bg: #3a3115;
-      --note-line: #8a7430;
-      --note-fg: #f2d98a;
-      --code-bg: #1e2228;
-    }
+    --teal-900: #0f3d3a;
+    --teal-800: #115e59;
+    --teal-700: #0f766e;
+    --teal-600: #0d9488;
+    --teal-500: #14b8a6;
+    --teal-100: #ccfbf1;
+    --teal-50: #f0fdfa;
+    --ink: #0f172a;
+    --body: #334155;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --white: #ffffff;
+    --warn-bg: #fff7ed;
+    --warn-border: #fdba74;
+    --warn-fg: #7c2d12;
   }
   * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--bg);
-    color: var(--fg);
+    background: var(--white);
+    color: var(--body);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.65;
     font-size: 16px;
   }
-  .wrap { max-width: 820px; margin: 0 auto; padding: 32px 20px 64px; }
-  header.page { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 8px; }
-  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 6px; }
-  .meta-line { color: var(--muted); font-size: 14px; margin: 0; }
-  h2 { font-size: 19px; margin: 32px 0 8px; padding-top: 8px; }
-  h3 { font-size: 16px; margin: 20px 0 6px; }
-  p, li { font-size: 15.5px; }
-  ul { padding-left: 22px; }
-  li { margin: 4px 0; }
-  a { color: var(--accent); }
+  img { max-width: 100%; }
+  a { color: var(--teal-700); }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  .site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 20;
+  }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 12px 20px; flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo { height: 44px; width: auto; display: block; }
+  .brand-name { display: block; font-weight: 700; color: var(--teal-800); font-size: 18px; line-height: 1.1; }
+  .brand-sub { display: block; color: var(--muted); font-size: 12.5px; }
+  .top-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+  .top-nav a {
+    color: var(--teal-800); text-decoration: none; font-size: 14px; font-weight: 600;
+    padding: 6px 10px; border-radius: 6px;
+  }
+  .top-nav a:hover { background: var(--teal-50); }
+
+  .hero { background: linear-gradient(135deg, var(--teal-700), var(--teal-500)); color: #fff; padding: 44px 0 40px; }
+  .hero h1 { margin: 0 0 8px; font-size: 34px; line-height: 1.2; }
+  .hero-sub { margin: 0 0 12px; font-size: 17px; max-width: 760px; color: #e6fffb; }
+  .hero .meta { margin: 0; font-size: 13.5px; color: #c7f4ee; }
+
+  main { padding: 8px 0 40px; }
+  section { padding: 26px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: 0; }
+  h2 { font-size: 22px; color: var(--teal-800); margin: 0 0 12px; scroll-margin-top: 84px; }
+  h3 { font-size: 16.5px; color: var(--ink); margin: 20px 0 6px; }
+  p { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 5px 0; }
   code {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    background: var(--code-bg);
-    padding: 1px 5px;
-    border-radius: 4px;
-    font-size: 0.9em;
+    background: var(--teal-50); color: var(--teal-800); padding: 1px 5px; border-radius: 4px; font-size: .9em;
   }
-  .note {
-    background: var(--note-bg);
-    border: 1px solid var(--note-line);
-    color: var(--note-fg);
-    border-radius: 8px;
-    padding: 10px 14px;
-    margin: 12px 0;
-    font-size: 14.5px;
+
+  .contents { background: var(--teal-50); border: 1px solid var(--teal-100); border-radius: 12px; padding: 18px 22px; margin: 24px 0; }
+  .contents h2 { margin: 0 0 6px; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; color: var(--teal-700); }
+  .contents ol { columns: 2; column-gap: 32px; margin: 8px 0 0; }
+  .contents a { color: var(--teal-800); text-decoration: none; }
+  .contents a:hover { text-decoration: underline; }
+
+  .callout { border-left: 4px solid var(--teal-500); background: var(--teal-50); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 14px 0; }
+  .callout.warn { border-left-color: var(--warn-border); background: var(--warn-bg); color: var(--warn-fg); }
+  .callout p { margin: 6px 0; }
+
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14.5px; }
+  th, td { border: 1px solid var(--border); text-align: left; padding: 9px 11px; vertical-align: top; }
+  th { background: var(--teal-50); color: var(--teal-800); font-weight: 700; }
+
+  .deletion-card { border: 1px solid var(--teal-100); background: var(--teal-50); border-radius: 12px; padding: 18px 22px; margin: 14px 0; }
+  .steps { counter-reset: step; list-style: none; padding-left: 0; }
+  .steps li { position: relative; padding-left: 38px; margin: 12px 0; }
+  .steps li::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--teal-600); color: #fff; font-weight: 700; font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
   }
-  .note strong { color: inherit; }
-  table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 14.5px; }
-  th, td { border: 1px solid var(--line); text-align: left; padding: 8px 10px; vertical-align: top; }
-  th { background: var(--code-bg); font-weight: 600; }
-  .toc { background: var(--code-bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px 18px; margin: 20px 0; }
-  .toc ul { margin: 6px 0 0; }
-  footer.page { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 16px; color: var(--muted); font-size: 13.5px; }
-  .placeholder { font-weight: 600; }
-  @media (max-width: 520px) {
-    body { font-size: 15px; }
-    h1 { font-size: 22px; }
-    table, th, td { font-size: 13.5px; }
-    th, td { padding: 6px 8px; }
+
+  .site-footer { background: var(--teal-900); color: #d7ece9; padding: 34px 0 18px; margin-top: 20px; }
+  .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 26px; }
+  .site-footer h4 { margin: 0 0 10px; color: #fff; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; }
+  .site-footer a { color: #a7e6df; text-decoration: none; }
+  .site-footer a:hover { text-decoration: underline; }
+  .site-footer p, .site-footer li { font-size: 14px; }
+  .footer-brand-name { font-weight: 700; color: #fff; font-size: 17px; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.18); margin-top: 24px; padding-top: 14px; font-size: 12.5px; color: #9fc9c4; }
+
+  @media (max-width: 720px) {
+    .hero h1 { font-size: 27px; }
+    .contents ol { columns: 1; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .header-inner { justify-content: center; text-align: center; }
+    .brand { justify-content: center; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-<header class="page">
-  <h1>Privacy Policy</h1>
-  <p class="meta-line">Truecare Hospitals — WhatsApp Business App Coexistence Integration</p>
-  <p class="meta-line">Effective date: 10 October 2026 &nbsp;·&nbsp; Last updated: 10 October 2026</p>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="https://truecarehospitals.com/" target="_blank" rel="noopener">
+      <img class="logo" src="data:image/png;base64,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" alt="Truecare Hospitals logo" onerror="this.style.display='none'" />
+      <span>
+        <span class="brand-name">Truecare Hospitals</span>
+        <span class="brand-sub">Multispeciality Hospital · Kolar, Karnataka</span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Section navigation">
+      <a href="#overview">Overview</a>
+      <a href="#data">Data</a>
+      <a href="#security">Security</a>
+      <a href="#deletion">Data Deletion</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<p>This Privacy Policy explains how <strong>Truecare Hospitals</strong> ("we", "us", "our"), a multispecialty hospital located in Kolar, Karnataka, India, collects, uses, stores, and protects information in connection with its WhatsApp Business App Coexistence integration (the "Service"). The Service is a software integration, built on Meta's WhatsApp Business Platform and Supabase, that connects the hospital's existing WhatsApp Business app number to a backend so that authorised staff can complete onboarding and the backend can receive WhatsApp event notifications.</p>
-
-<p>This policy describes only the data processed <em>by the Service's technical integration</em>. Messages that end users exchange with the hospital over WhatsApp are governed by WhatsApp's and Meta's own terms and privacy policies, as well as the hospital's own patient-notice practices.</p>
-
-<div class="note">
-  <strong>Items pending confirmation.</strong> A small number of legal details below are marked
-  <span class="placeholder">[TO BE PROVIDED]</span> because they are not defined in the Service's
-  code, configuration, or publicly available information and must not be invented. See
-  "Information requiring confirmation" at the end of this document.
+<div class="hero">
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="hero-sub">WhatsApp Business App Coexistence integration provided by TRUECARE IM for Truecare Hospitals.</p>
+    <p class="meta">Effective date: 10 October 2026 &nbsp;·&nbsp; Last updated: 10 October 2026</p>
+  </div>
 </div>
 
-<nav class="toc" aria-label="Contents">
-  <strong>Contents</strong>
-  <ul>
-    <li><a href="#scope">1. Scope and roles</a></li>
-    <li><a href="#data">2. Information we process</a></li>
-    <li><a href="#use">3. How we use information</a></li>
-    <li><a href="#meta">4. How we use Meta</a></li>
-    <li><a href="#supabase">5. How we use Supabase</a></li>
-    <li><a href="#sharing">6. Sharing and sub-processors</a></li>
-    <li><a href="#security">7. Security measures</a></li>
-    <li><a href="#retention">8. Retention</a></li>
-    <li><a href="#rights">9. Your rights and deletion requests</a></li>
-    <li><a href="#transfers">10. International transfers</a></li>
-    <li><a href="#children">11. Children</a></li>
-    <li><a href="#changes">12. Changes to this policy</a></li>
-    <li><a href="#contact">13. Contact</a></li>
-    <li><a href="#pending">14. Information requiring confirmation</a></li>
-  </ul>
-</nav>
+<main class="container">
 
-<h2 id="scope">1. Scope and roles</h2>
-<p>The Service is operated by <strong>Truecare Hospitals</strong>, which owns the WhatsApp Business account and phone number connected through the Service. The Service stores operator account data and technical event data. It does not itself provide medical advice and does not store medical records.</p>
-<p><strong>Truecare Hospitals</strong> is the controller of personal data connected to its WhatsApp number, and this integration processes that data on its behalf. Data relating to individual patients is handled in accordance with the hospital's own patient-notice and consent practices.</p>
+  <nav class="contents" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Who we are</a></li>
+      <li><a href="#data">Information the Service processes</a></li>
+      <li><a href="#use">How the Service uses information</a></li>
+      <li><a href="#meta">Meta and WhatsApp</a></li>
+      <li><a href="#backend">Backend and cloud providers</a></li>
+      <li><a href="#hosting">Where the Service is hosted</a></li>
+      <li><a href="#sharing">When information is shared</a></li>
+      <li><a href="#security">How the Service protects information</a></li>
+      <li><a href="#retention">How long information is kept</a></li>
+      <li><a href="#deletion">User data deletion instructions</a></li>
+      <li><a href="#rights">Your privacy rights</a></li>
+      <li><a href="#transfers">International transfers</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+      <li><a href="#unresolved">Details pending confirmation</a></li>
+    </ol>
+  </nav>
 
-<h2 id="data">2. Information we process</h2>
-<p>The Service processes the following categories of information. This list is derived from the Service's actual database schema and server components.</p>
+  <section id="overview">
+    <h2>1. Who we are</h2>
+    <p><strong>TRUECARE MULTISPECIALITY HOSPITAL</strong> ("the Hospital", also trading as <strong>Truecare Hospitals</strong>, "we", "us", "our") is a multispeciality hospital located in Kolar, Karnataka, India. TRUECARE IM provides the <strong>technical WhatsApp Business integration</strong> (the "Service") for the Hospital, connecting the Hospital's existing WhatsApp Business app number to Meta's WhatsApp Business Platform and to a secure backend built on Supabase.</p>
+    <p>This Privacy Policy explains what information the Service processes, why, and how it is protected. It applies only to the Service — the technical integration — and not to the Hospital's medical records or clinical systems. Messages that patients and other people exchange with the Hospital over WhatsApp are also governed by Meta's and WhatsApp's own terms and privacy policies.</p>
+    <p>You can visit the official hospital website at
+      <a href="https://truecarehospitals.com/" target="_blank" rel="noopener">https://truecarehospitals.com/</a>.</p>
+  </section>
 
-<h3>2.1 Operator account data</h3>
-<p>To authenticate the staff ("operators") who run onboarding, the Service uses email and password sign-in. We process:</p>
-<ul>
-  <li>Operator <strong>email address</strong> and an authentication credential managed by our authentication provider (passwords are handled by the provider and are not stored by the Service in readable form).</li>
-  <li>A generated <strong>operator user identifier</strong> (UUID) assigned by the authentication provider.</li>
-</ul>
+  <section id="data">
+    <h2>2. Information the Service processes</h2>
+    <p>The Service stores only the information it needs to run the WhatsApp integration. The categories below match the integration's actual database schema and server code.</p>
 
-<h3>2.2 WhatsApp Business account and asset identifiers</h3>
-<p>When an operator completes Meta Embedded Signup, the Service reads and stores business/asset identifiers returned by Meta:</p>
-<ul>
-  <li>Business account identifier and WhatsApp Business Account ("WABA") identifier.</li>
-  <li>Phone number identifier, display phone number, and verified business name.</li>
-  <li>Platform type, business-app coexistence flag, account status, and an onboarding timestamp.</li>
-</ul>
+    <h3>2.1 Operator (staff) account data</h3>
+    <p>To sign in the Hospital's staff ("operators") who run WhatsApp onboarding, the Service uses email and password authentication. It processes:</p>
+    <ul>
+      <li>The operator's <strong>email address</strong> and an authentication credential managed by our authentication provider (passwords are handled by that provider and are not stored by the Service in readable form).</li>
+      <li>A generated <strong>operator user identifier</strong> (a UUID) assigned by the authentication provider.</li>
+      <li>The operator's <strong>role</strong>: <code>owner</code>, <code>admin</code>, or <code>viewer</code>.</li>
+    </ul>
 
-<h3>2.3 Onboarding session data</h3>
-<p>To bind an Embedded Signup exchange to the correct operator, the Service issues a single-use, random <strong>nonce</strong> and stores it with the operator user identifier, an expiry time (10 minutes), and a consumed time.</p>
+    <h3>2.2 WhatsApp Business account and number identifiers</h3>
+    <p>When an operator completes Meta's Embedded Signup, the Service reads and stores identifiers that Meta returns for the Hospital's account:</p>
+    <ul>
+      <li>Business account identifier and WhatsApp Business Account ("WABA") identifier.</li>
+      <li>Phone number identifier, display phone number, and the verified business name.</li>
+      <li>Platform type, the business-app coexistence flag, account status, and an onboarding timestamp.</li>
+    </ul>
 
-<h3>2.4 Access credentials (tokens)</h3>
-<p>The Service exchanges Meta's authorization code, server-side, for a WhatsApp Business <strong>access token</strong>. That token is stored encrypted in Supabase Vault. Only an opaque Vault reference (a UUID) plus non-sensitive lifecycle metadata (status such as <code>none</code>/<code>active</code>/<code>expired</code>/<code>revoked</code>, expiry time, and last-rotated time) is stored in the Service's ordinary database tables. The raw token is not stored in ordinary tables and is never exposed to the browser page.</p>
+    <h3>2.3 Onboarding session data</h3>
+    <p>To link a signup attempt to the correct operator, the Service issues a single-use, random <strong>nonce</strong>. It stores the nonce with the operator user identifier, an expiry time (10 minutes), and the time it was used.</p>
 
-<h3>2.5 WhatsApp webhook event data</h3>
-<p>Meta sends webhook notifications to the Service for the connected WhatsApp Business Account (for example, incoming message notifications and message status changes). For each event the Service may store:</p>
-<ul>
-  <li>Object type, event field/type, WABA identifier, phone number identifier.</li>
-  <li>Message identifier, delivery/status value, and event timestamp.</li>
-  <li>A de-duplication key derived by hashing the event's identity fields, plus a signature-validity flag.</li>
-  <li>Received/processed timestamps and a processing status.</li>
-  <li>A <strong>redacted copy</strong> of the event payload (see 2.6).</li>
-</ul>
+    <h3>2.4 Access credentials (tokens)</h3>
+    <p>The Service exchanges Meta's authorization code, on the server, for a WhatsApp Business <strong>access token</strong>. That token is stored <strong>encrypted in Supabase Vault</strong>. Only an opaque Vault reference (a UUID) and non-sensitive lifecycle metadata (status such as <code>none</code>, <code>active</code>, <code>expired</code>, or <code>revoked</code>, plus expiry and last-rotated times) is stored in the Service's ordinary database tables. The raw token is never stored in ordinary tables and never reaches the browser page.</p>
 
-<h3>2.6 Redaction of payload content</h3>
-<p>Before any webhook payload is stored, the Service applies a redaction step implemented in code:</p>
-<ul>
-  <li>Message text and bodies, captions, media, files, links/URLs, contact cards, names, email addresses, and physical addresses are <strong>removed entirely</strong> ("dropped") and are not stored.</li>
-  <li>Phone-number-like identifiers (for example <code>from</code>, <code>to</code>, <code>wa_id</code>, <code>recipient_id</code>, <code>display_phone_number</code>, <code>phone_number</code>, <code>customer_phone</code>) are <strong>replaced with a truncated SHA-256 hash</strong>, not stored in plaintext.</li>
-  <li>Other string values are truncated to a maximum length, and nesting depth is capped, to limit what is retained.</li>
-</ul>
+    <h3>2.5 WhatsApp webhook event data</h3>
+    <p>Meta sends webhook notifications to the Service for the connected WhatsApp Business Account (for example, an incoming-message notification or a message status change). For each event the Service may store:</p>
+    <ul>
+      <li>The object type, event field/type, WABA identifier, and phone number identifier.</li>
+      <li>The message identifier, delivery/status value, and event timestamp.</li>
+      <li>A de-duplication key derived by hashing the event's identity fields, and whether the event's signature was valid.</li>
+      <li>Received and processed timestamps and a processing status.</li>
+      <li>A <strong>redacted copy</strong> of the event payload (see 2.6).</li>
+    </ul>
 
-<h3>2.7 Data we do not intentionally collect</h3>
-<p>The Service is not designed to collect special-category or medical information, and its redaction step is intended to strip message content, contact details, and raw phone numbers before storage.</p>
+    <h3>2.6 What the Service redacts before storing</h3>
+    <p>Before any webhook payload is stored, the Service applies a redaction step in code:</p>
+    <ul>
+      <li>Message text and bodies, captions, media, files, links/URLs, contact cards, names, email addresses, and physical addresses are <strong>removed entirely</strong> and are not stored.</li>
+      <li>Phone-number-like identifiers (for example <code>from</code>, <code>to</code>, <code>wa_id</code>, <code>recipient_id</code>, <code>display_phone_number</code>, <code>phone_number</code>, <code>customer_phone</code>) are <strong>replaced with a short SHA-256 hash</strong>, not stored in plaintext.</li>
+      <li>Other string values are truncated to a maximum length, and nesting depth is capped, to limit what is retained.</li>
+    </ul>
 
-<h2 id="use">3. How we use information</h2>
-<ul>
-  <li>To authenticate operators and authorize actions by role (<code>owner</code>, <code>admin</code>, <code>viewer</code>).</li>
-  <li>To complete Embedded Signup and securely store the resulting access token.</li>
-  <li>To verify that the WABA and phone number being onboarded match the assets granted by the operator.</li>
-  <li>To receive, verify, de-duplicate, and record WhatsApp webhook events relevant to the connected number.</li>
-  <li>To maintain operational and security logs (for example, rejected webhook signatures).</li>
-  <li>To comply with legal obligations and to enforce our terms.</li>
-</ul>
+    <h3>2.7 Information the Service does not intentionally collect</h3>
+    <p>The Service is not designed to collect medical records or other special-category information, and its redaction step is intended to strip message content, contact details, and raw phone numbers before storage.</p>
+  </section>
 
-<h2 id="meta">4. How we use Meta</h2>
-<p>The Service uses Meta's WhatsApp Business Platform and Graph API to: run the Meta Embedded Signup (Facebook Login for business) flow; exchange the resulting authorization code for a business access token; read the connected WhatsApp Business Account and phone number identifiers for verification; and subscribe the integration to receive webhook event notifications. Meta processes data under its own terms and privacy policy, available on Meta's websites. Meta is an independent controller/service provider for the data it processes on its platform.</p>
+  <section id="use">
+    <h2>3. How the Service uses information</h2>
+    <ul>
+      <li>To sign in operators and authorise their actions by role (<code>owner</code>, <code>admin</code>, <code>viewer</code>).</li>
+      <li>To complete Meta Embedded Signup and store the resulting access token securely.</li>
+      <li>To confirm that the WhatsApp Business Account and phone number being connected match the assets the operator granted.</li>
+      <li>To receive, verify, de-duplicate, and record WhatsApp webhook events for the connected number.</li>
+      <li>To keep operational and security logs (for example, rejected webhook signatures).</li>
+      <li>To meet legal obligations and enforce our terms.</li>
+    </ul>
+  </section>
 
-<h2 id="supabase">5. How we use Supabase</h2>
-<p>The Service's backend is hosted on Supabase, which provides the managed PostgreSQL database, authentication, edge functions, and encrypted secret storage (Vault) used by the Service. Supabase processes this data on our behalf as a hosting/sub-processor.</p>
+  <section id="meta">
+    <h2>4. Meta and WhatsApp</h2>
+    <p>The Service uses Meta's WhatsApp Business Platform and Graph API to: run Meta Embedded Signup (Facebook Login for Business); exchange the resulting authorization code for a business access token; read the connected WhatsApp Business Account and phone number identifiers for verification; and subscribe the integration to receive webhook notifications. Meta processes that data under its own terms and privacy policy. Meta is an independent controller for the data it processes on its platform.</p>
+  </section>
 
-<h2 id="sharing">6. Sharing and sub-processors</h2>
-<p>We do not sell personal data. We share data only with the following categories of recipients:</p>
-<table>
-  <thead>
-    <tr><th>Recipient</th><th>Purpose</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Meta Platforms, Inc. / WhatsApp</td><td>Embedded Signup, Graph API access, and webhook delivery for the connected WhatsApp Business number.</td></tr>
-    <tr><td>Supabase</td><td>Managed database, authentication, edge functions, and encrypted secret storage.</td></tr>
-    <tr><td>Static web hosting provider (GitHub Pages)</td><td>Serves the static onboarding and policy pages; does not receive Service data.</td></tr>
-  </tbody>
-</table>
-<p>The public policy page you are reading is served from a static GitHub Pages site that contains only this policy and no Service data. We do not share data with any other third parties except where required by law.</p>
+  <section id="backend">
+    <h2>5. Backend and cloud providers</h2>
+    <p>The Service's backend runs on <strong>Supabase</strong>, which provides the managed PostgreSQL database, authentication, edge functions, and encrypted secret storage (Vault) used by the Service. Supabase processes this data on the Hospital's behalf as a hosting and infrastructure provider.</p>
+  </section>
 
-<h2 id="security">7. Security measures</h2>
-<p>The Service implements the following technical measures. This description is factual and is not a guarantee of absolute security; no method of electronic storage or transmission is completely secure.</p>
-<ul>
-  <li>Webhook authenticity is verified using Meta's HMAC-SHA256 signature header (<code>X-Hub-Signature-256</code>) over the exact raw request body, with a timing-safe comparison.</li>
-  <li>Authorization codes and access tokens are exchanged and stored server-side; the raw token is held only in Supabase Vault (encrypted), referenced by an opaque UUID.</li>
-  <li>Database tables are protected with row-level security forced on, and are accessed through server-side functions rather than direct client access.</li>
-  <li>Operator actions are authorized by role; only operators with the <code>owner</code> role may perform token operations.</li>
-  <li>Application secrets (Meta app credentials, verification token, service credentials) are stored as server-side secrets and are not placed in client pages or the repository.</li>
-</ul>
+  <section id="hosting">
+    <h2>6. Where the Service is hosted</h2>
+    <ul>
+      <li>The <strong>onboarding application</strong> (the staff signup page used to connect the WhatsApp number) is a static web application hosted on <strong>Vercel</strong> at
+        <a href="https://truecare-im-whatsapp-coexistence.vercel.app/" target="_blank" rel="noopener">https://truecare-im-whatsapp-coexistence.vercel.app/</a>.</li>
+      <li>This <strong>privacy policy</strong> is a static page hosted on <strong>GitHub Pages</strong> at
+        <a href="https://gpttabrez.github.io/truecare-im-privacy-policy/privacy-policy.html" target="_blank" rel="noopener">https://gpttabrez.github.io/truecare-im-privacy-policy/privacy-policy.html</a>.</li>
+    </ul>
+    <p>These static hosters serve the pages only; they do not process the Service's data (operator accounts, tokens, or webhook records).</p>
+  </section>
 
-<h2 id="retention">8. Retention</h2>
-<p>We retain information only as long as necessary to operate the Service, meet legal obligations, and resolve disputes. Onboarding session records expire after 10 minutes, and expired sessions are removed by the Service. Account and asset identifiers are retained while the number remains connected through the Service. Access tokens are held in encrypted storage until they are revoked (at which point they are deleted from our secret store) or until they expire. Webhook event records are retained for operational and security purposes.</p>
-<div class="note"><span class="placeholder">[TO BE PROVIDED]</span> — exact retention period(s) for each category, if a specific duration must be stated: operator account data, onboarding session data, account/asset identifiers, access tokens, and webhook event records.</div>
+  <section id="sharing">
+    <h2>7. When information is shared</h2>
+    <p>We do not sell personal data. The Service shares data only with the providers needed to run it:</p>
+    <table>
+      <thead>
+        <tr><th>Recipient</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Meta Platforms, Inc. / WhatsApp</td><td>Embedded Signup, Graph API access, and webhook delivery for the connected WhatsApp Business number.</td></tr>
+        <tr><td>Supabase</td><td>Managed database, authentication, edge functions, and encrypted secret storage.</td></tr>
+        <tr><td>Vercel</td><td>Serves the static onboarding web application.</td></tr>
+        <tr><td>GitHub Pages</td><td>Serves this static privacy policy page.</td></tr>
+      </tbody>
+    </table>
+    <p>We do not share data with any other third parties except where required by law.</p>
+  </section>
 
-<h2 id="rights">9. Your rights and deletion requests</h2>
-<p>Subject to applicable law, individuals may have rights to access, correct, or delete their personal data, to restrict or object to processing, and to data portability. Because the Service is operated by Truecare Hospitals, requests relating to a WhatsApp conversation should generally be directed to the hospital, and requests relating to the Service's operator accounts or technical records may be directed to us.</p>
-<p>To submit a deletion or privacy request, contact us using the details in section 13. We will verify the request and respond within the period required by applicable law.</p>
+  <section id="security">
+    <h2>8. How the Service protects information</h2>
+    <p>The Service puts the following technical measures in place. This is a factual description and is not a guarantee of absolute security; no method of electronic storage or transmission is completely secure.</p>
+    <ul>
+      <li>Webhook authenticity is verified using Meta's HMAC-SHA256 signature header (<code>X-Hub-Signature-256</code>) over the exact raw request body, with a timing-safe comparison.</li>
+      <li>Authorization codes and access tokens are exchanged and stored server-side; the raw token is held only in Supabase Vault (encrypted) and referenced by an opaque UUID.</li>
+      <li>Database tables have row-level security forced on and are reached through server-side functions rather than direct client access.</li>
+      <li>Operator actions are authorised by role; only operators with the <code>owner</code> role can perform token operations.</li>
+      <li>Application secrets (Meta app credentials, verification token, and service credentials) are held as server-side secrets and are not placed in client pages or the public repository.</li>
+    </ul>
+  </section>
 
-<h2 id="transfers">10. International transfers</h2>
-<p>The Service uses cloud providers (Meta and Supabase) that may process data in countries other than India, where the Service is operated. Where required, transfers rely on appropriate safeguards provided by those providers.</p>
-<div class="note"><span class="placeholder">[TO BE PROVIDED]</span> — the Supabase project region/data residency, if a specific storage location must be stated.</div>
+  <section id="retention">
+    <h2>9. How long information is kept</h2>
+    <p>We keep information only as long as needed to run the Service, meet legal obligations, and resolve disputes:</p>
+    <ul>
+      <li>Onboarding session records expire after 10 minutes, and expired sessions are removed by the Service.</li>
+      <li>Account and asset identifiers are kept while the number remains connected through the Service.</li>
+      <li>Access tokens are held in encrypted storage until they are revoked (at which point they are deleted from our secret store) or until they expire.</li>
+      <li>Webhook event records are kept for operational and security purposes.</li>
+    </ul>
+    <div class="callout warn">
+      <p><strong>Not yet finalised:</strong> specific retention periods are not defined in the Service's code or configuration. See <a href="#unresolved">Details pending confirmation</a>. We do not state a retention period we cannot support.</p>
+    </div>
+  </section>
 
-<h2 id="children">11. Children</h2>
-<p>The Service is a business/operator-facing integration and is not directed to children. We do not knowingly collect personal data from children through the Service.</p>
+  <section id="deletion">
+    <h2>10. User data deletion instructions</h2>
+    <p>You can ask us to delete the information the Service holds about you. This section explains how to request deletion, how we verify a request, and what we can and cannot delete.</p>
 
-<h2 id="changes">12. Changes to this policy</h2>
-<p>We may update this policy from time to time. When we do, we will revise the "Last updated" date above. Material changes will be reflected on this page.</p>
+    <div class="deletion-card">
+      <h3>How to submit a deletion request</h3>
+      <ol class="steps">
+        <li>Email <a href="mailto:truecarehospitalsfrontdesk@gmail.com">truecarehospitalsfrontdesk@gmail.com</a> with the subject line <strong>"Data Deletion Request"</strong>.</li>
+        <li>Include the WhatsApp Business phone number involved (the Hospital number is <a href="tel:+916360166366">+91 6360-166-366</a>).</li>
+        <li>If your request is about a staff/operator account, include the operator email address.</li>
+        <li>Briefly describe what you want deleted (for example, "delete my operator account and any webhook records for my number").</li>
+      </ol>
+    </div>
 
-<h2 id="contact">13. Contact</h2>
-<p>For questions about this policy or the Service's data practices, or to make a privacy or deletion request:</p>
-<p>
-  <strong>Truecare Hospitals</strong><br />
-  C.B. Pura Main Road, Arahalli Gate, Kolar, Karnataka 563101, India<br />
-  Email: <a href="mailto:truecarehospitalsfrontdesk@gmail.com">truecarehospitalsfrontdesk@gmail.com</a><br />
-  Phone: <a href="tel:+916360166366">+91 6360-166-366</a><br />
-  Website: <a href="https://truecarehospitals.com">truecarehospitals.com</a>
-</p>
+    <h3>How we verify a request</h3>
+    <p>To protect the account, we confirm that the requester is authorised before we act — for example, by confirming control of the relevant WhatsApp Business number or operator account, or by another reasonable method. We may ask for additional confirmation before deleting anything.</p>
 
-<h2 id="pending">14. Information requiring confirmation</h2>
-<p>The following were intentionally left as placeholders because they are not defined in the Service's code, configuration, or publicly available information, and would otherwise be invented:</p>
-<ol>
-  <li>Full registered legal entity name and registration details for Truecare Hospitals, if these differ from the trading name. (The trading name, address, phone, and email above are taken from the hospital's public website.)</li>
-  <li>Exact retention period(s) for each data category, if a specific duration must be stated.</li>
-  <li>Supabase project region / data residency, if a specific storage location must be stated.</li>
-  <li>Governing law / jurisdiction clause and any required legal-basis statement (for example consent, contract, or legitimate interest).</li>
-  <li>Any Data Protection Officer or privacy officer contact, if applicable.</li>
-</ol>
+    <h3>What we can delete</h3>
+    <p>We can delete the information the Service stores in the integration backend, including: operator account records, onboarding session records, WhatsApp Business account and number identifiers, stored access tokens (which we revoke and remove from our secret store), and webhook event records.</p>
 
-<footer class="page">
-  <p>This Privacy Policy applies to the Truecare Hospitals WhatsApp Business App Coexistence integration. It describes the integration's technical data handling based on its implemented code and configuration.</p>
+    <h3>What we cannot delete</h3>
+    <p>The Service does not control data that lives on Meta's or WhatsApp's own systems — for example, your WhatsApp message history, backups on your device, and your WhatsApp Business account data. To delete that data, use WhatsApp's in-app controls or Meta's data-deletion process. Because the Service redacts and does not store message content, there is generally no message content held by the Service to delete.</p>
+
+    <h3>What happens next</h3>
+    <p>After we verify a request, we delete or de-identify the relevant records and revoke any stored token, and we confirm the outcome to you. We may keep a minimal record of the request itself where the law requires it.</p>
+  </section>
+
+  <section id="rights">
+    <h2>11. Your privacy rights</h2>
+    <p>Subject to applicable law, individuals may have the right to access, correct, or delete their personal data, to restrict or object to processing, and to data portability. Requests about a WhatsApp conversation should generally be directed to the Hospital; requests about the Service's operator accounts or technical records can be sent to us.</p>
+    <p>To make a request, use the details in <a href="#contact">Contact us</a>, or follow the steps in <a href="#deletion">User data deletion instructions</a>. We will verify the request and respond within the time required by applicable law.</p>
+  </section>
+
+  <section id="transfers">
+    <h2>12. International transfers</h2>
+    <p>The Service uses cloud providers (Meta and Supabase) that may process data in countries other than India, where the Service is operated. Where required, transfers rely on appropriate safeguards provided by those providers.</p>
+  </section>
+
+  <section id="children">
+    <h2>13. Children's privacy</h2>
+    <p>The Service is a staff-facing business integration and is not directed to children. We do not knowingly collect personal data from children through the Service.</p>
+  </section>
+
+  <section id="changes">
+    <h2>14. Changes to this policy</h2>
+    <p>We may update this policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. Material changes will be reflected on this page.</p>
+  </section>
+
+  <section id="contact">
+    <h2>15. Contact us</h2>
+    <p>For questions about this policy or the Service's data practices, or to make a privacy or deletion request:</p>
+    <p>
+      <strong>TRUECARE MULTISPECIALITY HOSPITAL</strong><br />
+      C.B. Pura Main Road, Arahalli Gate, Kolar, Karnataka 563101, India<br />
+      Email: <a href="mailto:truecarehospitalsfrontdesk@gmail.com">truecarehospitalsfrontdesk@gmail.com</a><br />
+      Phone: <a href="tel:+916360166366">+91 6360-166-366</a><br />
+      Website: <a href="https://truecarehospitals.com/" target="_blank" rel="noopener">https://truecarehospitals.com/</a>
+    </p>
+  </section>
+
+  <section id="unresolved">
+    <h2>16. Details pending confirmation</h2>
+    <p>The following items are not defined in the Service's code, configuration, or publicly available information. We list them here rather than stating details we cannot verify:</p>
+    <ul>
+      <li>Full registered legal entity name and registration number, if these differ from "TRUECARE MULTISPECIALITY HOSPITAL".</li>
+      <li>Specific retention periods for each data category (see section 9).</li>
+      <li>The Supabase project region / data residency, if a specific storage location must be stated.</li>
+      <li>A governing-law / jurisdiction clause and any required legal-basis statement (for example consent, contract, or legitimate interest).</li>
+      <li>A Data Protection Officer or privacy officer contact, if one has been appointed.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-brand-name">TRUECARE MULTISPECIALITY HOSPITAL</p>
+      <p>Truecare Hospitals — "Dedicated To Your Health". Multispeciality hospital in Kolar, Karnataka.</p>
+      <p>WhatsApp Business App Coexistence integration provided by TRUECARE IM.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>C.B. Pura Main Road, Arahalli Gate,<br />Kolar, Karnataka 563101, India</p>
+      <p>
+        <a href="tel:+916360166366">+91 6360-166-366</a><br />
+        <a href="mailto:truecarehospitalsfrontdesk@gmail.com">truecarehospitalsfrontdesk@gmail.com</a><br />
+        <a href="https://truecarehospitals.com/" target="_blank" rel="noopener">truecarehospitals.com</a>
+      </p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="#overview">Who we are</a></li>
+        <li><a href="#data">Information we process</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#deletion">Data deletion</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Truecare Hospitals. This privacy policy is hosted on GitHub Pages; the onboarding application is hosted on Vercel. It describes the integration's technical data handling based on its implemented code and configuration.</p>
+  </div>
 </footer>
-</div>
+
 </body>
 </html>
